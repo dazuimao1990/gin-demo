@@ -18,6 +18,11 @@ jobs:
       env:
         NODE_ENV: development
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version-file: go.mod
+          cache: false
       - name: Run
         run: pwd && ls -l /github/home && echo "/github/home"
       - name: RUN
