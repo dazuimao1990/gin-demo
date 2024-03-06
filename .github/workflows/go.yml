@@ -19,6 +19,6 @@ jobs:
         NODE_ENV: development
     steps:
       - name: Build
-        run: go build -v ./...
+        run: go build main.go -o demo
       - name: Run
         run: echo "done...."
