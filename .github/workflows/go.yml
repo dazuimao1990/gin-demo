@@ -14,7 +14,7 @@ jobs:
   container-test-job:
     runs-on: vci-arc-runner-set
     container:
-      image: golang:latest
+      image: cr-demo-cn-beijing.cr.volces.com/guox/golang:1.19
       env:
         NODE_ENV: development
     steps:
