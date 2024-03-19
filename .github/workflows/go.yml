@@ -33,13 +33,7 @@ jobs:
         run: pwd && ls -l /github/home && echo "/github/home"
       - name: RUN
         run: ls -l /__w/ && echo "/__w/"
-      - name: RUN
-        run: ls -l /__w/gin-demo && echo "/__w/gin-demo"
       - name: Build
         run:  go build -o demo main.go
-      - name: Run
-        run: echo "done...."
-  container-test2-job:
-    runs-on: my-arc-runner-set
-    steps:
-      - run: ls -l ./*
+      - name: Run show
+        run: ls -l /__w/ && echo "/__w/"
