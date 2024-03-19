@@ -14,7 +14,7 @@ jobs:
   container-test-job:
     runs-on: my-arc-runner-set
     container:
-      image: cr-demo-cn-beijing.cr.volces.com/guox/golang:1.19
+      image: golang:latest
       env:
         NODE_ENV: development
     steps:
@@ -39,3 +39,7 @@ jobs:
         run:  go build -o demo main.go
       - name: Run
         run: echo "done...."
+  container-test2-job:
+    runs-on: my-arc-runner-set
+    steps:
+      - run: ls -l ./*
