@@ -12,7 +12,7 @@ on:
 jobs:
 
   container-test-job:
-    runs-on: vci-arc-runner-set
+    runs-on: my-arc-runner-set
     container:
       image: cr-demo-cn-beijing.cr.volces.com/guox/golang:1.19
       env:
