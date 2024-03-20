@@ -39,9 +39,5 @@ jobs:
   container-test2-job:
     runs-on: my-arc-runner-set
     needs: [ container-test-job ]
-    container:
-      image: alpine:latest
-      env:
-        NODE_ENV: development
     steps:
       - run: ls -l $(pwd)
