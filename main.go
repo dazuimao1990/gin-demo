@@ -47,10 +47,10 @@ func main() {
 		})
 	})
 
-	r.GET("/videos", func(c *gin.Context) {
-		c.File("./videos/index.html")
-	})
+	// r.GET("/videos", func(c *gin.Context) {
+	// 	c.File("./videos/index.html")
+	// })
 
-	r.GET("/videos/:name", DowFile)
+	// r.GET("/videos/:name", DowFile)
 	r.Run(utils.GetEnvDefault("ADDRESS", "0.0.0.0") + ":" + utils.GetEnvDefault("PORT", "8080"))
 }
